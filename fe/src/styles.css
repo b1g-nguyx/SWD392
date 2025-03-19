@@ -1,0 +1,136 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    color: #2c3e50;
+    text-align: center;
+  }
+  
+  h3 {
+    color: #34495e;
+    margin-top: 20px;
+  }
+  
+  /* Medical Record Display */
+  .medical-record {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .medical-record p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .medical-record strong {
+    color: #2c3e50;
+  }
+  
+  .medical-record ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .medical-record ul li {
+    background-color: #f9fafb;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .medical-record ul li h4 {
+    color: #3498db;
+    margin-bottom: 10px;
+  }
+  
+  /* Medical Record Form */
+  form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+  }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  form label {
+    font-size: 16px;
+    color: #34495e;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  form input[type="text"],
+  form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  form button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  form button:hover {
+    background-color: #2980b9;
+  }
+
+  /* Button Styling */
+.edit-btn {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .edit-btn:hover {
+    background-color: #27ae60;
+  }
+  
+  
+  /* Layout Adjustments */
+  @media (max-width: 768px) {
+    .container {
+      width: 95%;
+    }
+  
+    form button {
+      width: 100%;
+    }
+  }
+  
