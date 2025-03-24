@@ -5,7 +5,7 @@ import MedicalRecordForm from './components/MedicalRecordForm';
 import { getMedicalRecord } from './services/medicalRecordService';
 
 const App = () => {
-  const [recordCode] = useState('12345'); // Example record code
+  const [recordCode] = useState('MR004'); // Example record code
   const [record, setRecord] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
 
@@ -13,6 +13,7 @@ const App = () => {
     // Fetch medical record on component mount
     const fetchMedicalRecord = async () => {
       try {
+        console.log("featching API  ")
         const data = await getMedicalRecord(recordCode);
         setRecord(data);
       } catch (error) {

@@ -18,6 +18,7 @@ namespace Presentation.Controllers
         [HttpGet("{recordCode}")]
         public async Task<IActionResult> GetMedicalRecordDetails(string recordCode)
         {
+            
             var record = await _service.GetMedicalRecordByCodeAsync(recordCode);
             if (record == null)
                 return NotFound("Medical record not found");
@@ -28,6 +29,7 @@ namespace Presentation.Controllers
         [HttpPut("{recordCode}")]
         public async Task<IActionResult> UpdateMedicalRecord(string recordCode, [FromBody] MedicalRecordDto recordDto)
         {
+
             if (recordCode != recordDto.RecordCode)
                 return BadRequest("Record code mismatch");
 
