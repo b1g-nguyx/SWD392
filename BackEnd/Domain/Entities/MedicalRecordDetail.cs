@@ -1,31 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Domain.Entities
+namespace Domain.Entities;
+
+public partial class MedicalRecordDetail
 {
-    public class MedicalRecordDetail
-    {
-        [Key]
-        public string RecordDetailCode { get; set; } // Mã chi tiết hồ sơ
+    public string recordDetailCode { get; set; } = null!;
 
-        public string RecordCode { get; set; } // Mã hồ sơ
+    public string? appointmentCode { get; set; }
 
-        [Required]
-        public string DoctorCode { get; set; } // Mã bác sĩ
+    public string recordCode { get; set; } = null!;
 
-        // Báo cáo y tế
-        [Column(TypeName = "nvarchar(max)")]
-        public string DoctorReport { get; set; } // Báo cáo bác sĩ
+    public string? doctorCode { get; set; }
 
-        [Column(TypeName = "nvarchar(max)")]
-        public string HealthcareResult { get; set; } // Kết quả chăm sóc sức khỏe
+    public string? result { get; set; }
 
-        [Column(TypeName = "nvarchar(max)")]
-        public string TreatmentPlan { get; set; } // Kế hoạch điều trị
-    }
+    public virtual Appointment? appointmentCodeNavigation { get; set; }
+
+    public virtual Doctor? doctorCodeNavigation { get; set; }
+
+    public virtual MedicalRecord recordCodeNavigation { get; set; } = null!;
 }
